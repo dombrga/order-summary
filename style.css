@@ -1,43 +1,38 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Red Hat Display', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
-body {
-  margin: 0
-}
+body { margin: 0; }
 
-h2 {
-  margin: 0;
-}
+h2 { margin: 0; }
 
-.flex {
-  display: flex;
-}
+.block { display: block; }
+
+.flex { display: flex; }
 
 .flex-center {
   justify-content: center;
   align-items: center;
 }
 
-.mb-20 {
-  margin-bottom: 20px;
-}
+.mb-20 { margin-bottom: 20px; }
 
 /* typography */
-.text-center {
-  text-align: center;
-}
+.text-center { text-align: center; }
 
 h2 { 
   font-size: 20px;
-  font-weight: 900; }
+  font-weight: 900; 
+}
 
 p { font-size: 12px;}
 
 .grey { color: grey; }
 
 .annual { font-weight: 900; }
+
+.statement { font-size: 14px;}
 
 .change {
   font-size: 11px;
@@ -53,11 +48,6 @@ p { font-size: 12px;}
 .cancel { font-weight: 900; }
 .cancel:hover { color: black; }
 
-
-
-
-
-
 .pointer {
   cursor: pointer;
 }
@@ -67,6 +57,7 @@ main {
   height: 100vh;
   background: hsl(225, 100%, 94%) url('./images/pattern-background-desktop.svg') no-repeat;
 
+  /* padding: 10px; */
   justify-content: center;
   align-items: center;
 }
@@ -74,6 +65,7 @@ main {
 .card {
   /* width: 25%; */
   width: 325px;
+  min-width: 300px;
   /* height: 300px; */
   background-color: white;
   border-radius: 17px;
@@ -81,7 +73,7 @@ main {
 }
 
 
-img {
+div.top-img img {
   width: 100%;
   border-radius: 17px 17px 0 0;
 }
@@ -100,13 +92,18 @@ div.texts {
 
 .left { 
   float: left;
+
+  align-items: center;
   column-gap: 10px;
 }
 .right { float: right;}
 
-.plan-price p, .cancel {
-  margin: 3px;
+img.music {
+  width: 30px;
+  height: 30px;
 }
+
+.plan-price p, .cancel { margin: 3px; }
 
 button {
   font-size: 12px;
@@ -125,10 +122,28 @@ button:hover {
   box-shadow: 0 15px 15px rgb(226, 222, 222);
 }
 
-
-
 @media (max-width: 375px) {
-  .card {
-    width: 290px;
+  /* typography */
+  .statement { font-size: 16px;}
+  
+  .annual { font-size: 14px; }
+  .price { font-size: 14px; }
+
+  .change { font-size: 13px; }
+  .cancel { font-size: 13px; }
+
+  button {
+    font-size: 14px;
+    padding:  13px;
+  }
+
+  /* others */
+  div.texts {
+    padding: 27px 20px 35px;
+  }
+
+  img.music {
+    width: 40px;
+    height: 40px;
   }
 }
